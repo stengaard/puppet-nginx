@@ -4,7 +4,7 @@ class Nginx < Formula
   homepage 'http://nginx.org/'
   url "http://nginx.org/download/nginx-1.9.15.tar.gz"
   sha256 "cc89b277cc03f403c0b746d60aa5943cdecf59ae48278f8cb7e2df0cbdb6dac3"
-  version '1.9.15-boxen1'
+  version '1.9.15-boxen2'
 
   depends_on 'pcre'
 
@@ -42,6 +42,7 @@ class Nginx < Formula
 
     args = ["--prefix=#{prefix}",
             "--with-http_ssl_module",
+            "--with-http_v2_module",
             "--with-pcre",
             "--with-ipv6",
             "--with-cc-opt=#{cc_opt}",
